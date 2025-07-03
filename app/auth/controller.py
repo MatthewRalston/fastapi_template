@@ -27,7 +27,7 @@ from ..entities.user import User, UserModel
 #from ..rate_limiter import limiter
 
 router = APIRouter(
-    prefix='/auth',
+    prefix='',
     tags=['auth'],
 )
 

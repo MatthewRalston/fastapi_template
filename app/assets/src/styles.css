@@ -1,11 +1,10 @@
 @import "tailwindcss";
 /* @config './tailwind.config.js */
 
-/*
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*/
 
 
 /*
@@ -77,16 +76,20 @@ Components:
 
 */
 @plugin "daisyui" {
-  themes: nord --default, abyss, cupcake, dracula, corporate --prefersdark;
-  root: ":root";
-  include: ; 
-  exclude: ;
-  prefix: ;
-  logs: true;
+    themes: nord --default, abyss, cupcake, dracula, corporate --prefersdark;
+    root: ":root";
+    include: ; 
+    exclude: ;
+    prefix: ;
+    logs: true;
 }
 
 /* Or just plain CSS if not using Tailwind */
 body {
-  font-family: sans-serif;
+    font-family: sans-serif;
 }
 
+
+.w-14 {
+    width: calc(var(--spacing) * 14);
+}

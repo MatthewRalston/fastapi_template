@@ -5,6 +5,13 @@ module.exports = {
     content: ['./app/**/*.py', './app/**/*.html'],
     theme: {
         extend: {
+            spacing: {
+                '20': '5rem',
+            },
+            container: {
+                center: true,
+                padding: '2rem',
+            },
             colors: {
                 primary: {
                     light: "#a9b4a6",

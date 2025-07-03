@@ -31,9 +31,11 @@ from .api import register_routes
 Base.metadata.create_all(bind=engine)
 
 async def startup():
-    limiter = anyio.to_thread.current_default_thread_limiter()
-    limiter.total_tokens = 100 # Change if needed
-    #limiter = Limiter(key_func=get_remote_address)
+    # AnyIO increase thread limit for performance
+    #limiter = anyio.to_thread.current_default_thread_limiter()
+    #limiter.total_tokens = 100 # Change if needed
+    # slowapi Limiter
+    limiter = Limiter(key_func=get_remote_address)
     
 
 
