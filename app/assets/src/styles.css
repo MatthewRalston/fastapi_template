@@ -1,0 +1,92 @@
+@import "tailwindcss";
+/* @config './tailwind.config.js */
+
+/*
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*/
+
+
+/*
+===================
+  d a i s y  U I
+===================
+
+See https://daisyui.com/components for details on using daisyUI components.
+Components:
+- button
+- dropdown
+- modal
+- swap
+- theme-controller
+- accordion
+- avatar
+- badge
+- card
+- carousel
+- chat-bubble
+- collapse
+- countdown
+- diff
+- kdb
+- list
+- stat
+- status
+- table
+- timeline
+- breadcrumbs
+- dock
+- link
+- menu
+- navbar
+- pagination
+- steps
+- tab
+- alert
+- loading
+- progress
+- radial
+--progress
+- skeleton
+- toast
+- tooltip
+- calendar
+- checkbox
+- fieldset
+- file
+--input
+- filter
+- label
+- radio
+- range
+- rating
+- select
+- input-field
+- textarea
+- toggle
+- validator
+- divider
+- drawer
+- footer
+- hero
+- indicator
+- join
+- mask
+- stack
+
+*/
+@plugin "daisyui" {
+  themes: nord --default, abyss, cupcake, dracula, corporate --prefersdark;
+  root: ":root";
+  include: ; 
+  exclude: ;
+  prefix: ;
+  logs: true;
+}
+
+/* Or just plain CSS if not using Tailwind */
+body {
+  font-family: sans-serif;
+}
+

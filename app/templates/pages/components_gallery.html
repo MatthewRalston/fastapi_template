@@ -1,0 +1,37 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Home - Index page{% endblock %}
+
+
+<div class="content">
+  {% block content %}
+  <h1>Welcome to the Homepage</h1>
+  <p>This is block content defined in pages/index.html. This is a Jinja2 template served by FastAPI.</p>
+
+
+      <h2>Accordion style</h2>
+      <!-- Accordion: mutually exclusive collapse -->
+      {% include "components/accordion.html" %}
+
+
+      <h2>Collapse tabs</h2>
+      <!-- Two types of collapsable tabs -->
+      {% include "components/collapse.html" %}
+
+
+      <h2>Statistics with icons</h2>
+      <!-- View statistics with icons -->
+      {% include "components/statistics.html" %}
+                                 
+      <h2>Table with highlighting on hover</h2>
+      {% include "components/table.html" %}
+
+      <h2>Table Pagination</h2>
+      {% include "components/pagination.html" %}
+
+      <h2>Steps/timeline</h2>
+      {% include "components/steps.html" %}
+
+  {% endblock %}
+  
+</div>

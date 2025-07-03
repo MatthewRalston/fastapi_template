@@ -1,0 +1,11 @@
+* MVC architecture in FastAPI 
+YouTube video: [[https://youtu.be/H9Blu0kWdZE?si=Yg4Y93l61sGquuRV][Eric Roby - You're probably building FastAPI apps WRONG]]
+'model.py' are strictly data structures. No code to interact with the database exactly. 'service.py' is a combination of logic for pure functionality and IO related tasks to do with the entity/model specs.
+'controller.py' references both to perform actions at the endpoint via the service layer.
+
+Whether or not these need to be separated according to Eric Roby's pattern remains to be seen.
+
+* Other questionables in the design.
+I don't really see a point in have 'database' as an entire directory at this point. Unless you're spinning of some separate queries into raw SQL and executing via psycopg2
+
+The entities.users and users.service/model components seem a little flexible as far as whether a whole module is needed for specific components. There is a lot of referencing between them at the service layer and some of it seems redundant.
